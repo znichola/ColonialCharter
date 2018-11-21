@@ -1,0 +1,61 @@
+[h]Colonial Charter [i]beta*[/i][/h]
+After fixing that dent you got after crashlanding on this planet. You finally realise what the mission was: [i]establish a colonial outpost and exploit its resources for the benefit of your people.[/i]
+
+[quote]Ok so I'm kind of ready to release this as I have it, but it needs tweaking and probably has loads of bugs. If you find anything or want to contribute post/message here or on the forum.[/quote]
+
+[size=150]Production cycle[/size]
+So the mod adds colonists using the existing production system, they are essentially an item, the only difference being they are not used up, but rather returned as tired after a shift and will need to rest before returning -- a circular production cycle. They plug into the endgame upgrade system by producing space science-packs, the satellite science reward has been nerfed accordingly to encourage building up a large population. 
+
+[attachment=4]example colony.jpg[/attachment]
+
+There is also an infrastructure required to produce the: food, consumer goods and medical supplies that are needed to keep your colonists happily working. 
+
+[size=150]Getting the first colonists[/size]
+
+First their are tech requirements: 
+[spoiler][attachment=0]tech tree.jpg[/attachment][/spoiler]
+
+Then a colony ship has been added that needs to be sent on the rocket, the colonists will appear as a reward for the rocket launch. 
+
+
+[size=150]Types of buildings[/size]
+[b]Housing[/b] - Used to change the state of a colonist, from tired to normal, injured to normal, deceased to an empty pod. Requires food/consumer goods and medical supplies. Also used as a place for colonists to reproduce. 
+[attachment=3]housing.jpg[/attachment]
+[b]Workshop[/b] - A place where colonists produce items, technical doc, legal doc, and space science-packs, returned tired with a chance of getting injured.
+[attachment=2]workshop.jpeg[/attachment]
+[b]Waiting-hall[/b] - Essentially a chest for colonists, 2x2 entity, you can daisy-chain them with smart inserters and circuits to get similar behaviour to a belt. 
+[attachment=1]waiting-hall.jpg[/attachment]
+[size=150]Future ideas/intentions and things to contribute[/size]
+If anyone wants to add something send it over and I'll add it in, I can do icons/graphics if you guys can figure out the code, I'm pretty bad at that, though the same goes for the graphics if you have an idea for better graphics, the workshop, housing or anything I'll gladly add it in, not the best at photoshop or 3D modelling. 
+
+[quote]If you guys have ideas for balancing the material costs - please post, looking for feedback on this.[/quote]
+
+[list=1]
+[*]Add achievements, 1st colonist, 1000th colonists, 1st native born, that kind of stuff.  
+[*]Expand tech tree to use legal documents for upgrades to colonists, faster working/more output, etc, flavoured as amendments to the charter. 
+[*]A better system for colonists death and injuries, currently the output is a 2% chance of death and 98% of a normal colonist, but obviously, these two don't always fire at the same time. In the long run, it levels out but it can be weird to just have a colonist disappear. 
+[*]Limit the waiting hall to just colonists, couldn't figure out the method to filter a container to just one item group.
+[*]Graphic for an inserter that looks like a one-way tunnel that only moves colonists, based on the loader entity. I can probably figure out a graphic but no idea how to do the code. 
+[*]Different sized building, for workshop/housing, make colonies look more interesting. 
+[*]Make putting colonists in anything but a waiting hall impossible, not sure it's possible. A workaround could be to give them a stack size of 1 so it's impractical, and larger stack size in a waiting hall, like how an artillery wagon has 100 stacks for shells and chest has 1. Again no idea how to do this. 
+[*]Make it possible to land colonists sooner than a rocket, not sure how but I get that it kind of sucks you need a late game map to even try the mod. 
+[*]Add more intermediate items the colonists consume, not sure what the right balance would be without making it tedious.
+[*]Want to limit colonists for they can only rest when they are a tile that is below a pollution threshold. Encourage using trains to transport colonist and have them living far away from the ugly and polluted factory. 
+[*]Thought about adding a landing location as an entity, so a rocket launch would give landing coordinates that need to be fed into the landing pad which would then produce colonists. Not sure how to approach the animation for something like that. Could even have the lander returned so it can get refurbished and set back. Lots of possibilities here.
+[*]Adding O2 or vital liquids as input to workshops and housing, not really comfortable enough with the api to add something like this, but I think it could be worthwhile figuring out. 
+[*]Add consequences for black-outs, possibly something like ruining production, producing injured or deceased colonist, but not sure if it's desirable or possible to do. 
+[*] ... Something more? [/list]
+
+[size=150]Mod compatibility[/size]
+It should be fully compatible with any existing games, and I intend to make updates compatible with ongoing saves as I'm using it in my play-though as well. 
+
+The only base game files that I modify is the satellite, to change the science reward to encourage building up a large population. There should be nothing stopping the mod from working with many of the others out there.
+
+[size=150][url=https://mods.factorio.com/mod/colonial_charter]Download[/url][/size]
+
+[size=150]Shoutout to helpful mods[/size]
+Some mods whose source files were instructive in helping me put this together. 
+[url=https://mods.factorio.com/mod/expanded-rocket-payloads]Expanded rocket payloads[/url]
+[url=https://mods.factorio.com/mod/homeworld_redux]Homeworld redux[/url]
+
+Finally, why not check out my other [url=https://mods.factorio.com/mod/FastDischargeAccu]mod[/url], that adds a fast charging/discharging accumulator, useful for setting priorities in a power network.

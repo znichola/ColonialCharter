@@ -1,0 +1,11 @@
+{
+    "name": "ColonialCharter",
+    "version": "0.1.0",
+    "title": "Colonial Charter",
+    "author": "Zinovic",
+    "contact": "",
+    "homepage": "",
+    "factorio_version": "0.16",
+    "dependencies": ["base >= 0.16"],
+    "description": "After fixing that dent you got after crashlanding on this planet. You finally realise what the mission was: establish a colonial outpost and exploit its resources for the benefit of your people."
+}
