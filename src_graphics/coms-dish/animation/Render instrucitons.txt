@@ -1,0 +1,13 @@
+Image render:
+
+use img camera
+sun hardness set to 0.05
+ground plane untick camera ray visibility, under cycls setting object settings
+use the two first players to render
+
+Shadow render:
+
+use shaow-cam
+set sun hardness to 0.0
+for the whole dish model untick camera ray visibility
+just use the first layer, so the ambient lights don't messup the crisp shadow. 

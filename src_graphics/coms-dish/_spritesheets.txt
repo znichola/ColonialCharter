@@ -1,0 +1,4 @@
+coms-dish.png,171,190,5
+coms-dish-shadow.png,289,122,5
+hr-coms-dish.png,343,381,5
+hr-coms-dish-shadow.png,578,244,5
