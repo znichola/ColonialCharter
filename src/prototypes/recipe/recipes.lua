@@ -16,10 +16,7 @@ data:extend({
   enabled = false,
 },
   -- rest
-{
-    type = "recipe-category",
-    name = "colonial-rest"
-},
+
 -- buildings
 {
   type = "recipe",
@@ -152,10 +149,7 @@ data:extend({
 },
 
 -- work
-{
-  type = "recipe-category",
-  name = "colonial-work"
-},
+
 -- buildings
 {
   type = "recipe",
@@ -358,72 +352,32 @@ data:extend({
   result = "medical-supplies",
   result_count = 1,
 },
-
--- {
---   type = "recipe",
---   name = "centrifuge",
---   energy_required = 4,
---   enabled = false,
---   ingredients =
---   {
---     {"concrete", 100},
---     {"steel-plate", 50},
---     {"advanced-circuit", 100},
---     {"iron-gear-wheel", 100}
---   },
---   result = "centrifuge",
---   requester_paste_multiplier= 10
--- },
--- {
---   type = "recipe",
---   name = "uranium-processing",
---   energy_required = 10,
---   enabled = false,
---   category = "centrifuging",
---   ingredients = {{"uranium-ore", 10}},
---   icon = "__base__/graphics/icons/uranium-processing.png",
---   icon_size = 32,
---   subgroup = "raw-material",
---   order = "k[uranium-processing]", -- k ordering so it shows up after explosives which is j ordering
---   results =
---   {
---     {
---       name = "uranium-235",
---       probability = 0.007,
---       amount = 1
---     },
---     {
---       name = "uranium-238",
---       probability = 0.993,
---       amount = 1
---     }
---   }
--- },
-
--- {
---   type = "recipe",
---   name = "kovarex-enrichment-process",
---   energy_required = 50,
---   enabled = false,
---   category = "centrifuging",
---   ingredients = {{"uranium-235", 40}, {"uranium-238", 5}},
---   icon = "__base__/graphics/icons/kovarex-enrichment-process.png",
---   icon_size = 32,
---   subgroup = "intermediate-product",
---   order = "r[uranium-processing]-c[kovarex-enrichment-process]",
---   main_product = "",
---   results =
---   {
---     {
---       name = "uranium-235",
---       amount = 41
---     },
---     {
---       name = "uranium-238",
---       amount = 2
---     }
---   },
---   allow_decomposition = false
--- },
+{
+  type = "recipe",
+  name = "coms-dish",
+  energy_required = 15,
+  ingredients =
+  {
+    {"iron-plate", 60},
+    {"electronic-circuit", 30},
+    -- {"concrete ", 80},
+  },
+  result = "coms-dish",
+  enabled = false,
+},
+{
+  type = "recipe",
+  name = "colonist-arrival-data",
+  category = "colonial-coms",
+  energy_required = 15,
+  ingredients = 
+  {
+    -- {"electronic-circuit", 1}
+  },
+  result= "colonist-arrival-data",
+  allow_decomposition = false,
+  enabled = false,
+  subgroup = "colonial-coms",
+}
 
 })

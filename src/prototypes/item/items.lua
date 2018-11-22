@@ -158,5 +158,29 @@ data:extend({
       },
       
 
+      {
+        type = "item",
+        name = "coms-dish",
+        icon = "__ColonialCharter__/graphics/icons/coms-dish.png",
+        icon_size = 32,
+        flags = {"goes-to-quickbar"},
+        subgroup = "colonial-buildings",
+        order = "a[items]-c[coms-dish]",
+        place_result = "coms-dish",
+        stack_size = 20
+      },
+
+      {
+        type = "item",
+        name = "colonist-arrival-data",
+        icon = "__ColonialCharter__/graphics/icons/colonist-arrival-data.png",
+        icon_size = 32,
+        flags = {"goes-to-main-inventory"},
+        subgroup = "colonial-products",
+        order = "f[arrival-data]",
+        stack_size = 100,
+      },
+
+      
 
 })

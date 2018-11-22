@@ -33,5 +33,26 @@ data:extend(
     group = "colonial-charter",
     order = "e"
   },
+  {
+    type = "item-subgroup",
+    name = "colonial-coms",
+    group = "colonial-charter",
+    order = "e"
+  },
+
+
+  -- recipe categories
+  {
+    type = "recipe-category",
+    name = "colonial-rest"
+  },
+  {
+    type = "recipe-category",
+    name = "colonial-work"
+  },
+  {
+    type = "recipe-category",
+    name = "colonial-coms"
+  },
 
 })

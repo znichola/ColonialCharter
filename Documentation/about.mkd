@@ -51,5 +51,6 @@ Why not check out my other [mod](https://mods.factorio.com/mod/FastDischargeAccu
 Some mods whose source files were instructive in helping me put this together. 
 [Expanded rocket payloads](https://mods.factorio.com/mod/expanded-rocket-payloads)
 [Homeworld redux](https://mods.factorio.com/mod/homeworld_redux)
+[Coms-dish 3D model](https://3dwarehouse.sketchup.com/model/20a3711b1dacf7cff8b758b99bd30e5b/Antenna-One)
 
 Finally why not check out my other [url=https://mods.factorio.com/mod/FastDischargeAccu]mod[/url], that adds a fast charging/discharging accumulator, useful for setting priorities in a power network. 

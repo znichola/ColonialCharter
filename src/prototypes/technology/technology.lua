@@ -52,6 +52,16 @@ data:extend({
         type = "unlock-recipe",
         recipe = "empty-pod"
       },
+
+      -- coms
+      {
+        type = "unlock-recipe",
+        recipe = "colonist-arrival-data"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "coms-dish"
+      },
       
 
     },
