@@ -20,6 +20,7 @@ start_game = True
 user_dir = ""
 factorio_mod_dir = ""
 steam_exe = ""
+steam_game_id = "steam://rungameid/427520"
 
 user_dir = os.path.expanduser('~')
 if platform.system() == "Windows":
@@ -107,5 +108,5 @@ if start_game:
     print("\nStarting Factorio Game")
     game = steam_exe + " steam://rungameid/427520"
     print("run command:", game)
-    subprocess.call(game)
+    subprocess.call([steam_exe, steam_game_id])
 
