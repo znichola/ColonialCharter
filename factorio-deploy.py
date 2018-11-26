@@ -10,19 +10,30 @@ import zipfile
 import json
 
 import platform
+import subprocess
+
+# Load Windows RedEdit Lib
+if platform.system() == "Windows":
+    import winreg
 
 ## Configuration Section
 deploy_mod = True
+start_game = True
 
 ## Get information from filesystem
 user_dir = ""
 factorio_mod_dir = ""
+steam_exe = ""
+steam_game_id = "steam://rungameid/427520"
 
 user_dir = os.path.expanduser('~')
 if platform.system() == "Windows":
     factorio_mod_dir = os.path.join(user_dir, "AppData", "Roaming", "Factorio", "mods")
+    key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Software\\Valve\\Steam")
+    steam_exe = winreg.QueryValueEx(key, "SteamExe")[0]
 else:
     factorio_mod_dir = os.path.join(user_dir, ".factorio", "mods")
+    steam_exe = "steam"
 
 if not os.path.exists(factorio_mod_dir):
     print ("No Factorio mod directory found. Aborting.")
@@ -95,3 +106,9 @@ if deploy_mod:
     if os.path.exists(destination):
         os.remove(destination)
     shutil.move(zipname, destination)
+
+if start_game:
+    print("\nStarting Factorio Game")
+    print("run command:", steam_exe, steam_game_id)
+    subprocess.call([steam_exe, steam_game_id])
+
