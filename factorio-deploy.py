@@ -19,12 +19,19 @@ if platform.system() == "Windows":
 ## Configuration Section
 deploy_mod = True
 start_game = True
+### Complete this if you're not using Steam
+### Example :
+### factorio_exe = "c:\\Games\\Factorio\\bin\\factorio.exe"
+### factorio_exe = "/home/user/.steam/steam/steamapps/common/Factorio/bin/x64/factorio"
+factorio_exe = ''
 
 ## Get information from filesystem
 user_dir = ""
 factorio_mod_dir = ""
 steam_exe = ""
 steam_game_id = "steam://rungameid/427520"
+
+factorio_cmd = ''
 
 user_dir = os.path.expanduser('~')
 if platform.system() == "Windows":
@@ -34,6 +41,17 @@ if platform.system() == "Windows":
 else:
     factorio_mod_dir = os.path.join(user_dir, ".factorio", "mods")
     steam_exe = "steam"
+
+print("Steam_exe:", steam_exe)
+print("factorio_mod_dir:", factorio_mod_dir)
+print("factorio_exe:", factorio_exe)
+
+if factorio_exe == "":
+    factorio_cmd = [steam_exe, steam_game_id]
+else:
+    factorio_cmd = [factorio_exe]
+
+print("Factorio Command:", factorio_cmd)
 
 if not os.path.exists(factorio_mod_dir):
     print ("No Factorio mod directory found. Aborting.")
@@ -109,6 +127,6 @@ if deploy_mod:
 
 if start_game:
     print("\nStarting Factorio Game")
-    print("run command:", steam_exe, steam_game_id)
-    subprocess.call([steam_exe, steam_game_id])
+    print("run command:", factorio_cmd)
+    subprocess.call(factorio_cmd)
 
