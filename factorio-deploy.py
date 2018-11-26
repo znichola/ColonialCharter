@@ -12,6 +12,10 @@ import json
 import platform
 import subprocess
 
+# Load Windows RedEdit Lib
+if platform.system() == "Windows":
+    import winreg
+
 ## Configuration Section
 deploy_mod = True
 start_game = True
@@ -25,7 +29,6 @@ steam_game_id = "steam://rungameid/427520"
 user_dir = os.path.expanduser('~')
 if platform.system() == "Windows":
     factorio_mod_dir = os.path.join(user_dir, "AppData", "Roaming", "Factorio", "mods")
-    import winreg
     key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Software\\Valve\\Steam")
     steam_exe = winreg.QueryValueEx(key, "SteamExe")[0]
 else:
