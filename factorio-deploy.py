@@ -109,7 +109,6 @@ if deploy_mod:
 
 if start_game:
     print("\nStarting Factorio Game")
-    game = steam_exe + " steam://rungameid/427520"
-    print("run command:", game)
+    print("run command:", steam_exe, steam_game_id)
     subprocess.call([steam_exe, steam_game_id])
 
