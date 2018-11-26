@@ -23,6 +23,7 @@ start_game = True
 ### Example :
 ### factorio_exe = "c:\\Games\\Factorio\\bin\\factorio.exe"
 ### factorio_exe = "/home/user/.steam/steam/steamapps/common/Factorio/bin/x64/factorio"
+### factorio_exe = "/home/user/.steam/steam/steamapps/common/Factorio/bin/x64/factorio --load-game /home/user/.factorio/saves/TestColonie2"
 factorio_exe = ''
 
 ## Get information from filesystem
@@ -49,7 +50,7 @@ print("factorio_exe:", factorio_exe)
 if factorio_exe == "":
     factorio_cmd = [steam_exe, steam_game_id]
 else:
-    factorio_cmd = [factorio_exe]
+    factorio_cmd = factorio_exe.split(' ')
 
 print("Factorio Command:", factorio_cmd)
 
