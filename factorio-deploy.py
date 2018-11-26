@@ -10,17 +10,23 @@ import zipfile
 import json
 
 import platform
+import subprocess
 
 ## Configuration Section
 deploy_mod = True
+start_game = True
 
 ## Get information from filesystem
 user_dir = ""
 factorio_mod_dir = ""
+factorio_install_dir = ""
 
 user_dir = os.path.expanduser('~')
 if platform.system() == "Windows":
     factorio_mod_dir = os.path.join(user_dir, "AppData", "Roaming", "Factorio", "mods")
+    import winreg
+    key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Software\\Valve\\Steam")
+    factorio_install_dir = winreg.QueryValueEx(key, "SteamExe")[0]
 else:
     factorio_mod_dir = os.path.join(user_dir, ".factorio", "mods")
 
@@ -95,3 +101,10 @@ if deploy_mod:
     if os.path.exists(destination):
         os.remove(destination)
     shutil.move(zipname, destination)
+
+if start_game:
+    print("\nStarting Factorio Game")
+    game = factorio_install_dir + " steam://rungameid/427520"
+    print("run command:", game)
+    subprocess.call(game)
+
