@@ -1,0 +1,10 @@
+hydrauponics dome
+img 		288 224,16
+hr img 		576,448,16
+collision box:
+
+
+shadow 		320 207 
+hr shadow 	641 414
+
+shadow shift 	32.5 11 

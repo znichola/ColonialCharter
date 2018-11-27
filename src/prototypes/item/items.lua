@@ -157,6 +157,17 @@ data:extend({
         stack_size = 50,
       },
       
+      {
+        type = "item",
+        name = "landing-site",
+        icon = "__ColonialCharter__/graphics/icons/landing-site.png",
+        icon_size = 32,
+        flags = {"goes-to-quickbar"},
+        subgroup = "colonial-buildings",
+        order = "g[items]-e[landing-site]",
+        place_result = "landing-site",
+        stack_size = 20
+      },
 
       {
         type = "item",
@@ -179,6 +190,38 @@ data:extend({
         subgroup = "colonial-products",
         order = "f[arrival-data]",
         stack_size = 100,
+      },
+
+      {
+        type = "item",
+        name = "hydroponics-building",
+        icon = "__ColonialCharter__/graphics/icons/hydroponics-building.png",
+        icon_size = 32,
+        flags = {"goes-to-quickbar"},
+        subgroup = "colonial-buildings",
+        order = "g[items]-e[hydrauponics]",
+        place_result = "hydroponics-building",
+        stack_size = 20
+      },
+      {
+        type = "item",
+        name = "soil",
+        icon = "__ColonialCharter__/graphics/icons/soil.png",
+        icon_size = 32,
+        flags = {"goes-to-main-inventory"},
+        subgroup = "colonial-products",
+        order = "g[soil]",
+        stack_size = 100,
+      },
+      {
+        type = "item",
+        name = "fertiliser",
+        icon = "__ColonialCharter__/graphics/icons/fertiliser.png",
+        icon_size = 32,
+        flags = {"goes-to-main-inventory"},
+        subgroup = "colonial-products",
+        order = "g[fertiliser]",
+        stack_size = 50,
       },
 
       

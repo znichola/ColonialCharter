@@ -37,11 +37,18 @@ data:extend(
     type = "item-subgroup",
     name = "colonial-coms",
     group = "colonial-charter",
-    order = "e"
+    order = "f"
+  },
+  {
+    type = "item-subgroup",
+    name = "colonial-landing",
+    group = "colonial-charter",
+    order = "f"
   },
 
 
   -- recipe categories
+  -- refered as 'crafting-categorie' when defining an entity 
   {
     type = "recipe-category",
     name = "colonial-rest"
@@ -54,5 +61,13 @@ data:extend(
     type = "recipe-category",
     name = "colonial-coms"
   },
+  {
+    type = "recipe-category",
+    name = "colonial-agriculture"
+  },
+  {
+    type = "recipe-category",
+    name = "colonial-landing"
+  }
 
 })

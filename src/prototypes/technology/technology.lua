@@ -1,6 +1,54 @@
 data:extend({
   {
     type = "technology",
+    name = "colonial-agriculture",
+    icon_size = 128,
+    icon = "__ColonialCharter__/graphics/technology/colonial-agriculture.png",
+    prerequisites = {"colonial-charter"},
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "hydroponics-building",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "soil",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "fertiliser",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "automated-food"
+      },
+      
+      {
+        type = "unlock-recipe",
+        recipe = "grow-lumber"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "bio-research"
+      },
+    },
+    unit =
+    {
+      count = 600,
+      ingredients =
+      {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+        {"space-science-pack", 2},
+      },
+      time = 40
+    },
+    order = "k-b"
+  },
+  {
+    type = "technology",
     name = "colonial-charter",
     icon_size = 128,
     icon = "__ColonialCharter__/graphics/technology/colonial-charter.png",
@@ -40,10 +88,7 @@ data:extend({
       },    
       
       -- items
-      {
-        type = "unlock-recipe",
-        recipe = "food"
-      },
+      
       {
         type = "unlock-recipe",
         recipe = "consumer-goods"

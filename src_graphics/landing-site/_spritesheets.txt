@@ -1,0 +1,1 @@
+smoke-animation.png,352,352,16

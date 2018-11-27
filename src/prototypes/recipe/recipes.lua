@@ -324,22 +324,6 @@ data:extend({
 
 {
   type = "recipe",
-  name = "food",
-  energy_required = 10,
-  enabled = false,
-  category = "crafting-with-fluid",
-  ingredients =
-  {
-    {"coal", 5},
-    {"sulfur", 3},
-    {"stone", 4},
-    {type="fluid", name="water", amount=100}
-  },
-  result= "food",
-  result_count = 4
-},
-{
-  type = "recipe",
   name = "medical-supplies",
   category = "crafting",
   enabled = false,
@@ -352,6 +336,45 @@ data:extend({
   result = "medical-supplies",
   result_count = 1,
 },
+
+{
+  type = "recipe",
+  name = "landing-site",
+  energy_required = 5,
+  ingredients =
+  {
+    {"steel-plate", 60},
+    {"electronic-circuit", 30},
+    {"radar", 2},
+    -- {"concrete ", 80},
+  },
+  result = "landing-site",
+  enabled = true,
+},
+
+{
+  type = "recipe",
+  name = "landing-colonists",
+  icon = "__ColonialCharter__/graphics/icons/landing-colonists.png",
+  icon_size = 32,
+  energy_required = 10,
+  ingredients =
+  {
+    {"colonist-arrival-data", 100},
+  },
+  results =
+  {
+    {
+      name = "colonist",
+      amount = 6
+    }
+  },
+  allow_decomposition = false,
+  category = "colonial-landing",
+  subgroup = "colonial-landing",
+  enabled = true,
+},
+
 {
   type = "recipe",
   name = "coms-dish",
@@ -378,6 +401,131 @@ data:extend({
   allow_decomposition = false,
   enabled = false,
   subgroup = "colonial-coms",
+},
+
+
+{
+  type = "recipe",
+  name = "hydroponics-building",
+  energy_required = 15,
+  ingredients =
+  {
+    {"iron-plate", 60},
+    {"electronic-circuit", 30},
+    -- {"concrete ", 80},
+  },
+  result = "hydroponics-building",
+  enabled = true,
+},
+{
+  type = "recipe",
+  name = "soil",
+  energy_required = 10,
+  enabled = false,
+  category = "crafting-with-fluid",
+  ingredients =
+  {
+    {"raw-wood", 10},
+    {"stone", 1},
+    {type="fluid", name="water", amount=10}
+  },
+  result= "soil",
+  result_count = 1
+},
+{
+  type = "recipe",
+  name = "fertiliser",
+  energy_required = 10,
+  enabled = false,
+  category = "crafting",
+  ingredients =
+  {
+    {"coal", 4},
+    {"stone", 2},
+  },
+  result= "fertiliser",
+  result_count = 1
+},
+{
+  type = "recipe",
+  name = "automated-food",
+  icon = "__ColonialCharter__/graphics/icons/automated-food.png",
+  icon_size = 32,
+  energy_required = 80,
+  enabled = false,
+  category = "colonial-agriculture",
+  subgroup = "colonial-products",
+  ingredients =
+  {
+    {"soil", 100},
+    {"fertiliser", 40},
+    -- {type="fluid", name="water", amount=100}
+  },
+  results =
+  {
+    {
+      name = "food",
+      amount = 20
+    },
+    {
+      name = "soil",
+      amount = 80
+    },
+  },
+},
+{
+  type = "recipe",
+  name = "grow-lumber",
+  icon = "__base__/graphics/icons/raw-wood.png",
+  icon_size = 32,
+  energy_required = 80,
+  enabled = false,
+  category = "colonial-agriculture",
+  subgroup = "colonial-products",
+  ingredients =
+  {
+    {"soil", 100},
+    {"fertiliser", 40},
+    -- {type="fluid", name="water", amount=100}
+  },
+  results =
+  {
+    {
+      name = "wood",
+      amount = 100
+    },
+    {
+      name = "soil",
+      amount = 80
+    },
+  },
+},
+{
+  type = "recipe",
+  name = "bio-research",
+  icon = "__ColonialCharter__/graphics/icons/bio-research.png",
+  icon_size = 32,
+  energy_required = 80,
+  enabled = false,
+  category = "colonial-agriculture",
+  subgroup = "colonial-activities",
+  ingredients =
+  {
+    {"soil", 100},
+    {"fertiliser", 40},
+    -- {type="fluid", name="water", amount=100}
+  },
+  results =
+  {
+    {
+      name = "food",
+      amount = 10
+    },
+    {
+      name = "soil",
+      amount = 80
+    },
+  },
 }
 
 })
