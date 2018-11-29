@@ -1,13 +1,15 @@
 # Todo List
-holding station for colonists only. - Waiting are in, no idea on exclusivity
+- holding station for colonists only. - Waiting are in, no idea on exclusivity
 
-add wast as byproduct to reprocess. - maybe for later. 
+- add wast as byproduct to reprocess. - maybe for later. 
 
-Add a landing-site were colonists are received - landing site is in, but animation is shit. 
+- Add a landing-site were colonists are received - landing site is in, but animation is shit. 
 
-Add in science cost to techs, here in the doc
+- Add in science cost to techs, here in the doc
 
-Implement the planned techs and new items.
+- Implement the planned techs and new items.
+
+The basic idea for the science will be to add intermidiate products for each of the advanced techs. These will have the same cost as their vanila beacon equivilent. The colonists then use this intermidiate in a workshop to produce the final tech, science-pack-3, militaty-pack ... 
 
 # TECH PROGRESSION
 ```
