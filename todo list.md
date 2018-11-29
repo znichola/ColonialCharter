@@ -9,7 +9,7 @@ Add a landing-site were colonits are rescived - landing site is in, but animatio
 
 
 # TECH PROGRESSION
-
+```
 advanced-electronics > colonial-coms > colonial-agriculture > colonial-charter > articles-of-colonisation
 
 colonial-agriculture > colonial-bio-research > planethood
@@ -25,9 +25,9 @@ advanced-electronics-2 > colonial-high-tech-production
 rocket-silo > colonial-space-reaserch
 
 ...
-
+```
 # TECH DESCRIPTION
-
+```
   colonial-coms
 unlock recipe: coms-dish,  colonist-arrival-data
 
@@ -54,9 +54,9 @@ this is where we put some sort of colonist output improvments, maybe workshop cr
 this will be the final colonial tech, the *goal* of the mod. 
 
 ...
-
+```
 # RECIPE DESCRIPTION
-
+```
   field-equipment
 energy: 1
 engine-unit x1, advanced-circuit x1, iron-gear-wheel x5, iron-plate x10
@@ -99,11 +99,11 @@ used to produce space science, will look like a giant telescope.
 something balanced for the lategame tech upgrades. 
 
 ...
-
+```
 # other stuff
 
 Migration snippets for future use 
-
+```
 for index, force in pairs(game.forces) do
   local technologies = force.technologies
   local recipes = force.recipes
@@ -116,3 +116,4 @@ for index, force in pairs(game.forces) do
     recipes["explosive-cannon-shell"].reload()
   end
 end
+```
