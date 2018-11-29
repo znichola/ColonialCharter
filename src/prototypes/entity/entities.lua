@@ -180,7 +180,7 @@ data:extend({
     -- module_specification = { module_slots = 0 }
   },
 
-  -- STATION CHEST
+  -- WAITING HALL
   {
     type = "container",
     name = "waiting-hall",
