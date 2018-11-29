@@ -28,74 +28,74 @@ rocket-silo > colonial-space-reaserch
 
 # TECH DESCRIPTION
 
-    colonial-coms
+  colonial-coms
 unlock recipe: coms-dish,  colonist-arrival-data
 
-    colonal-agriculture
+  colonal-agriculture
 unlock recipe: hydrauponics-building, soil, fertiliser, automated-food
 
-    colonial-bio-research
+  colonial-bio-research
 unlock recipe: bio-research, grow-lumber, field-equipment
 This should be the way to produce blue science packs. 
 
-    colonial-charter
+  colonial-charter
 unlock recipe: landing-site, housing, workshop, waiting-hall
 
-    articles-of-colonisation
+  articles-of-colonisation
 unlock recipe: legal-work
 
-    colonial-reproductive-initiative
+  colonial-reproductive-initiative
 unlock recipe: reproduce, memorial, heal, medical-supplies
 
-    charter-amendment
+  charter-amendment
 this is where we put some sort of colonist output improvments, maybe workshop craft speed or something. 
 
-    planethood
+  planethood
 this will be the final colonial tech, the *goal* of the mod. 
 
 ...
 
 # RECIPE DESCRIPTION
 
-    field-equipment
+  field-equipment
 energy: 1
 engine-unit x1, advanced-circuit x1, iron-gear-wheel x5, iron-plate x10
 
-    bio-research
+  bio-research
 category: colonial-agriculture
 energy: 70 (vanilla blue is 12, time should be balanced with output)
 ingretients: field-equipment x6, colonist x3, soil x50, fertiliser x2, water x10
 result: tierd-colonist x3, soil x45, science-pack-3 x6
 
-    military-equipment
+  military-equipment
 ingredients: grenade x1, gun-turret x1, piercing-rounds-magazine x1
 
-    military-science-pack 
+  military-science-pack 
 category: colonial-work
 energy: 70
 ingredients: colonist x3, military-equipment x6
 
-    industial-equipment
+  industial-equipment
 ingredients: electric-engine-unit x1, electric-furnace  x1
 
-    production-science-pack
+  production-science-pack
 category: colonial-work
 energy: 70
 ingredients: colonist x3, industrial-equipment x5
 
-    high-tech-equipment
+  high-tech-equipment
 ingredients: battery x1, copper-cable x30, processing-unit x3, speed-module x1
 
-    high-tech-science-pack
+  high-tech-science-pack
 category: colonial-work
 energy: 70
 ingredients: colonist x3, high-tech-equipment x5
 
-    optical-observatory
+  optical-observatory
 subgroup: colonial-buildings
 used to produce space science, will look like a giant telescope. 
 
-    observation-equipment
+  observation-equipment
 something balanced for the lategame tech upgrades. 
 
 ...
