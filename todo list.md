@@ -1,11 +1,11 @@
 # Todo List
-tech order, so they appear togther in the tree - NO idea how, low priority
+tech order, so they appear together in the tree - NO idea how, low priority
 
-holding station for colonists only. - Waiting are in, no idea on exlusivity
+holding station for colonists only. - Waiting are in, no idea on exclusivity
 
 add wast as byproduct to reprocess. - maybe for later. 
 
-Add a landing-site were colonits are rescived - landing site is in, but animation is shit. 
+Add a landing-site were colonists are received - landing site is in, but animation is shit. 
 
 
 # TECH PROGRESSION
@@ -31,8 +31,8 @@ rocket-silo > colonial-space-reaserch
   colonial-coms
 unlock recipe: coms-dish,  colonist-arrival-data
 
-  colonal-agriculture
-unlock recipe: hydrauponics-building, soil, fertiliser, automated-food
+  colonial-agriculture
+unlock recipe: hydroponics-building, soil, fertiliser, automated-food
 
   colonial-bio-research
 unlock recipe: bio-research, grow-lumber, field-equipment
@@ -48,7 +48,7 @@ unlock recipe: legal-work
 unlock recipe: reproduce, memorial, heal, medical-supplies
 
   charter-amendment
-this is where we put some sort of colonist output improvments, maybe workshop craft speed or something. 
+this is where we put some sort of colonist output improvements, maybe workshop craft speed or something. 
 
   planethood
 this will be the final colonial tech, the *goal* of the mod. 
@@ -75,7 +75,7 @@ category: colonial-work
 energy: 70
 ingredients: colonist x3, military-equipment x6
 
-  industial-equipment
+  industrial-equipment
 ingredients: electric-engine-unit x1, electric-furnace  x1
 
   production-science-pack
