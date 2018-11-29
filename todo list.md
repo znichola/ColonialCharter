@@ -1,12 +1,13 @@
 # Todo List
-tech order, so they appear together in the tree - NO idea how, low priority
-
 holding station for colonists only. - Waiting are in, no idea on exclusivity
 
 add wast as byproduct to reprocess. - maybe for later. 
 
 Add a landing-site were colonists are received - landing site is in, but animation is shit. 
 
+Add in science cost to techs, here in the doc
+
+Implement the planned techs and new items.
 
 # TECH PROGRESSION
 ```
