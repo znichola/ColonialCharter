@@ -15,7 +15,7 @@ The basic idea for the science will be to add intermidiate products for each of 
 ```
 advanced-electronics > colonial-coms > colonial-agriculture > colonial-charter > articles-of-colonisation
 
-colonial-agriculture > colonial-bio-research > planethood
+colonial-charter > colonial-bio-research > planethood
 
 articles-of-colonisation > colonial-reproductive-initiative > planethood
 
@@ -33,22 +33,44 @@ rocket-silo > colonial-space-reaserch
 ```
   colonial-coms
 unlock recipe: coms-dish,  colonist-arrival-data
+ingredients: science-pack-1 x50, science-pack-2 x50
+time: 15
 
   colonial-agriculture
 unlock recipe: hydroponics-building, soil, fertiliser, automated-food
+ingredients: science-pack-1 x80, science-pack-2 x80
+time: 15
 
   colonial-bio-research
 unlock recipe: bio-research, grow-lumber, field-equipment
+ingredients: science-pack-1 x100, science-pack-2 x 100
+time: 15
 This should be the way to produce blue science packs. 
 
   colonial-charter
 unlock recipe: landing-site, housing, workshop, waiting-hall
+ingredients: science-pack-1 x80, science-pack-2 x80
+time: 15
 
   articles-of-colonisation
 unlock recipe: legal-work
+ingredients: science-pack-1 x150, science-pack-2 x150
+time: 20
 
   colonial-reproductive-initiative
 unlock recipe: reproduce, memorial, heal, medical-supplies
+ingredients: science-pack-1 x100, science-pack-2 x100, legal-documents x200
+time: 20
+
+colonial-production-optimisation
+unlock recipe: industrial-equipment, production-science-pack
+ingredients: science-pack-1 x200, science-pack-2 x200, science-pack-3 x200, legal-documents x200
+time: 30
+
+colonial-high-tech-production
+unlock recipe: high-tech-equipment, high-tech-science-pack
+ingredients: science-pack-1 x250, science-pack-2 x250, science-pack-3 x250, legal-documents x250
+time: 30
 
   charter-amendment
 this is where we put some sort of colonist output improvements, maybe workshop craft speed or something. 
@@ -61,8 +83,10 @@ this will be the final colonial tech, the *goal* of the mod.
 # RECIPE DESCRIPTION
 ```
   field-equipment
+type: itme
+subgroup: colonial-products
 energy: 1
-engine-unit x1, advanced-circuit x1, iron-gear-wheel x5, iron-plate x10
+ingredients: engine-unit x1, advanced-circuit x1, iron-gear-wheel x5, iron-plate x10
 
   bio-research
 category: colonial-agriculture
