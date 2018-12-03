@@ -252,8 +252,8 @@ data:extend({
       {
         {
           filename = "__ColonialCharter__/graphics/entity/landing-site/landing-site-night.png",
-          width = 353,
-          height = 368,
+          width = 352,
+          height = 384,
           frame_count = 1,
           repeat_count = 16,
           shift = {0, 0}
@@ -263,19 +263,21 @@ data:extend({
         },
       }
     },
--- TODO: Working visualisation is not working. Not sure how to fix, also not a top priority becasue it's likly to change. 
-    working_visualisation =
+-- TODO: It's working now! 
+    working_visualisations =
     {
       {
         animation =
         {
-          filename = "__ColonialCharter__/graphics/entity/landing-site/landing-site-night.png",
+          filename = "__ColonialCharter__/graphics/entity/landing-site/smoke-animation.png",
           -- 352,352,16
-          frame_count = 16,
+          line_length = 4,
           width = 352,
           height = 352,
-          animation_speed = 0.5,
-          shift = util.by_pixel(0, -15),
+          frame_count = 16,
+          animation_speed = 0.8,
+          -- animation_speed = 1 / crafting_speed, 
+          -- shift = util.by_pixel(0, -15),
         },
       },
     },
@@ -335,9 +337,10 @@ data:extend({
           height = 190,
           frame_count = 5,
           line_length = 5,
-          animation_speed = 1 / 30,
+          animation_speed = 1 / 90,
                               -- 135 38 - I have no idea how this shift thing works, or what the units are
           shift = util.by_pixel(18, -47), 
+          run_mode = "forward-then-backward",
           hr_version =
           {
             filename = "__ColonialCharter__/graphics/entity/coms-dish/hr-coms-dish.png",
@@ -345,8 +348,9 @@ data:extend({
             height = 381,
             frame_count = 5,
             line_length = 5,
-            animation_speed = 1 / 30,
-            shift = util.by_pixel(18, -47), 
+            animation_speed = 1 / 90,
+            shift = util.by_pixel(18, -47),
+            run_mode = "forward-then-backward",
             scale = 0.5
           }
         },   
@@ -356,9 +360,10 @@ data:extend({
           height = 122,
           frame_count = 5,
           line_length = 5,
-          animation_speed = 1 / 30,
+          animation_speed = 1 / 90,
                                 --214 53
           shift = util.by_pixel(110, 19), 
+          run_mode = "forward-then-backward",
           draw_as_shadow = true,
           hr_version =
           {
@@ -367,8 +372,9 @@ data:extend({
             height = 244,
             frame_count = 5,
             line_length = 5,
-            animation_speed = 1 / 30,
+            animation_speed = 1 / 90,
             shift = util.by_pixel(110, 19), 
+            run_mode = "forward-then-backward",
             scale = 0.5,
             draw_as_shadow = true
           }
