@@ -263,7 +263,6 @@ data:extend({
         },
       }
     },
--- TODO: It's working now! 
     working_visualisations =
     {
       {
@@ -427,20 +426,30 @@ data:extend({
         layers =
         {
           {
-            filename = "__ColonialCharter__/graphics/entity/hydroponics-building/hydroponics-building.png",
+            filename = "__ColonialCharter__/graphics/entity/hydroponics-building/growing.png",
+            width = 258,
+            height = 186.5,
+            frame_count = 16,
+            line_length = 4,
+            animation_speed = 1/30,
+            shift = util.by_pixel(-1.5, -0.25)
+          },
+          {
+            filename = "__ColonialCharter__/graphics/entity/hydroponics-building/glass-dome.png",
             width = 288,
             height = 224,
             frame_count = 1,
-            -- had an issue with the bounidng box with the animation sprites. It's also a bit shit and the file size is massive. 
+            repeat_count = 16,
             -- frame_count = 16,
             -- line_length = 4,
             -- animation_speed = 1 / 30,
             hr_version =
             {
-              filename = "__ColonialCharter__/graphics/entity/hydroponics-building/hr-hydroponics-building.png",
+              filename = "__ColonialCharter__/graphics/entity/hydroponics-building/hr-glass-dome.png",
               width = 576,
               height = 448,
               frame_count = 1,
+              repeat_count = 16,
               -- frame_count = 16,
               -- line_length = 4,
               -- animation_speed = 1 / 30,
@@ -452,7 +461,7 @@ data:extend({
             width = 320,
             height = 207,
             frame_count = 1,
-            -- repeat_count = 16,
+            repeat_count = 16,
             shift = util.by_pixel(16.75, 5.5), 
             draw_as_shadow = true,
             hr_version =
