@@ -8,3 +8,12 @@ shadow 		320 207
 hr shadow 	641 414
 
 shadow shift 	32.5 11 
+
+growing hr version dimentions
+37 off image bottom
+
+3px right 0.5 px down: shift = (-1.5,-0.25)
+
+hr-growing.png	516,373,16
+hr is too big
+will only use normal res
