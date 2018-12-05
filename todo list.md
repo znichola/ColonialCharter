@@ -11,8 +11,29 @@
 
 The basic idea for the science will be to add intermidiate products for each of the advanced techs. These will have the same cost as their vanila beacon equivilent. The colonists then use this intermidiate in a workshop to produce the final tech, science-pack-3, militaty-pack ... 
 
+```
+  ideas for expanding agricultural production cycle, mixed with life support expansion. 
+air-filtration > nitrogen + oxygen + carbon-sulphates: all as liquids. 
+mine-stone > stone, minerals 0.02%
+  leave this for now
+    crush-stone > stone-pulp, minerals 
+    brick > stone-pulp
+    stone-pulp is used in concreete 
+nitrogen, sulphates, minerals > fertiliser
+oxygen, water, nitrogen > life-suport-unit 
+
+Should life support be requierd as input to each colonist recipe? Maybe have it requiered to build then assumed it's a closed system with little to no loss. I like this idea. 
+
+electronic-circuit, iron-plate > consumer-tech
+cotton > clothes - leave this one for now. 
+```
+
 # TECH PROGRESSION
 ```
+find-good-tech > air-filtration > colonial-construction > colonial-agriculture
+
+air-filtration > pollutant-sequestration
+
 advanced-electronics > colonial-coms > colonial-agriculture > colonial-charter > articles-of-colonisation
 
 colonial-charter > colonial-bio-research > planethood
@@ -31,6 +52,20 @@ rocket-silo > colonial-space-reaserch
 ```
 # TECH DESCRIPTION
 ```
+  atmospheric-sequestration
+unlock recipe: nitrogen-sequestration, oxygen-sequestration, atmospheric-sequestor, 
+ingredients: science-pack-1 x50, science-pack-2 x50
+time: 10
+
+  pollutant-sequestration
+unlock recipe: pollutant-sequestration
+will see where to add this, not the highest priority. 
+
+colonial-construction
+unlock recipe: housing, workshop, waiting-hall
+ingredients: science-pack-1 x50, science-pack-2 x50
+time: 10
+
   colonial-coms
 unlock recipe: coms-dish,  colonist-arrival-data
 ingredients: science-pack-1 x50, science-pack-2 x50
@@ -51,7 +86,7 @@ This should be the way to produce blue science packs.
 done: icon, 
 
   colonial-charter
-unlock recipe: landing-site, housing, workshop, waiting-hall
+unlock recipe: landing-site, colonist-landing
 ingredients: science-pack-1 x80, science-pack-2 x80
 time: 15
 done: icon,
