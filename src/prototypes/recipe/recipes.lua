@@ -526,6 +526,24 @@ data:extend({
       amount = 80
     },
   },
-}
+},
+
+-- ATMOSPHERIC SEQUSTRATION
+{
+  type = "recipe",
+  name = "atmospheric-sequestor",
+  energy_required = 15,
+  ingredients =
+  {
+    {"iron-plate", 10},
+    {"copper-plate", 10},
+    {"electronic-circuit", 20},
+    {"pump", 5},
+  },
+  result = "atmospheric-sequestor",
+  enabled = true,
+},
+
+
 
 })

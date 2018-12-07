@@ -503,4 +503,144 @@ data:extend({
       -- module_specification = { module_slots = 0 }
     },
 
+    -- ATMOSPHERIC SEQUESTOR
+    {
+      type = "assembling-machine",
+      name = "atmospheric-sequestor",
+      icon = "__ColonialCharter__/graphics/icons/atmospheric-sequestor.png",
+      icon_size = 32,
+      flags = {"placeable-neutral", "placeable-player", "player-creation"},
+      minable = {hardness = 0.2, mining_time = 0.5, result = "atmospheric-sequestor"},
+      max_health = 300,
+      corpse = "big-remnants",
+      dying_explosion = "medium-explosion",
+      fluid_boxes =
+      {
+        {
+          production_type = "output",
+          pipe_picture = assembler2pipepictures(),
+          pipe_covers = pipecoverspictures(),
+          base_area = 10,
+          base_level = 1,
+          pipe_connections = {{ type="output", position = {0, -2} }},
+          -- secondary_draw_orders = { north = -1 }
+        },
+        {
+          production_type = "output",
+          pipe_picture = assembler2pipepictures(),
+          pipe_covers = pipecoverspictures(),
+          base_area = 10,
+          base_level = 1,
+          pipe_connections = {{ type="output", position = {0, 2} }},
+          -- secondary_draw_orders = { north = -1 }
+        },
+        {
+          production_type = "output",
+          pipe_picture = assembler2pipepictures(),
+          pipe_covers = pipecoverspictures(),
+          base_area = 10,
+          base_level = 1,
+          pipe_connections = {{ type="output", position = {-2, 0} }}, --{2, 0} the north direction
+          -- secondary_draw_orders = { north = -1 }
+        },
+        -- off_when_no_fluid_recipe = true
+      },
+      
+      collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+      selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+      -- drawing_box = {{-1.5, -1.9}, {1.5, 1.5}},
+      -- light = {intensity = 0.75, size = 8, color = {r = 1.0, g = 1.0, b = 1.0}},
+      -- alert_icon_shift = util.by_pixel(-3, -12),
+      animation =
+      {
+        layers =
+        {
+          {
+            filename = "__ColonialCharter__/graphics/entity/atmospheric-sequestor/atmospheric-sequestor.png",
+            width = 90,
+            height = 97,
+            frame_count = 1,
+            repeat_count = 9,
+            -- animation_speed = 1/10,
+            shift = util.by_pixel(0, 0),
+            hr_version = 
+            {
+              filename = "__ColonialCharter__/graphics/entity/atmospheric-sequestor/hr-atmospheric-sequestor.png",
+              width = 180,
+              height = 194,
+              frame_count = 1,
+              repeat_count = 9,
+              -- animation_speed = 1/10,
+              shift = util.by_pixel(0, 0)
+            }
+          },
+          {
+            filename = "__ColonialCharter__/graphics/entity/atmospheric-sequestor/atmospheric-sequestor-fan.png",
+            width = 90,
+            height = 97,
+            frame_count = 9,
+            line_length = 3,
+            animation_speed = 1/10,
+            shift = util.by_pixel(0, 0),
+            hr_version =
+            {
+              filename = "__ColonialCharter__/graphics/entity/atmospheric-sequestor/hr-atmospheric-sequestor-fan.png",
+            width = 180,
+            height = 194,
+            frame_count = 9,
+            line_length = 3,
+            animation_speed = 1/10,
+            shift = util.by_pixel(0, 0),
+            scale = 0.5
+            }
+          },
+          {
+            filename = "__ColonialCharter__/graphics/entity/atmospheric-sequestor/atmospheric-sequestor-shadow.png",
+            width = 124,
+            height = 64,
+            frame_count = 1,
+            repeat_count = 9,
+            shift = util.by_pixel(20.5, 10.5), 
+            draw_as_shadow = true,
+            hr_version =
+            {
+              filename = "__ColonialCharter__/graphics/entity/atmospheric-sequestor/hr-atmospheric-sequestor-shadow.png",
+              width = 248,
+              height = 128,
+              frame_count = 1,
+              repeat_count = 9,
+              shift = util.by_pixel(20.5, 10.5), 
+              scale = 0.5,
+              draw_as_shadow = true
+            }
+          }
+        }
+      },
+      crafting_categories = {"colonial-atmospherics"},
+      crafting_speed = 5,
+      energy_source =
+      {
+        type = "electric",
+        usage_priority = "secondary-input",
+        -- emissions = 0.05 / 1.5
+      },
+      energy_usage = "800kW",
+      ingredient_count = 1,
+      -- open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
+      -- close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
+      vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      working_sound =
+      {
+        sound =
+        {
+          filename = "__base__/sound/lab.ogg",
+          volume = 0.7
+        },
+        apparent_volume = 1
+      },
+      -- module_specification = { module_slots = 0 }
+    },
+
+
+
 })

@@ -22,6 +22,8 @@ mine-stone > stone, minerals 0.02%
 nitrogen, sulphates, minerals > fertiliser
 oxygen, water, nitrogen > life-suport-unit 
 
+soil, steel-plate, life-support-unit, (glass if there  is a mod present), pump > hydroponics-building
+
 Should life support be requierd as input to each colonist recipe? Maybe have it requiered to build then assumed it's a closed system with little to no loss. I like this idea. 
 
 electronic-circuit, iron-plate > consumer-tech
@@ -56,6 +58,7 @@ rocket-silo > colonial-space-reaserch
 unlock recipe: nitrogen-sequestration, oxygen-sequestration, atmospheric-sequestor, 
 ingredients: science-pack-1 x50, science-pack-2 x50
 time: 10
+done: icon, 
 
   pollutant-sequestration
 unlock recipe: pollutant-sequestration
@@ -126,6 +129,46 @@ done: icon,
 ```
 # RECIPE DESCRIPTION
 ```
+atmospheric-sequestor
+type: entity
+subgroup: colonial-buildings
+energy: 4
+ingredients: pump x5, iron-plate x10, electronic-circuit x20, copper-plate x20
+done: entity, recipe, itme, graphics,
+
+atmospheric-sequestration
+type: fluid recipe
+produces: oxygen, nitrogen, pollutant
+done: fuild-recipe, 
+
+oxygen, nitrogen, pollutant
+type: fluid
+done: fluid.lua protoype in but untested, 
+
+life-support-fuild - not needed if life support unit is made with chemistry
+type: fluid
+subgroup: colonial-atmospherics
+category: chemistry
+
+life-support-unit
+type: itme, recipe
+subgroup: colonial-products
+category: chemistry, crafting-with-fluid
+energy: 1
+ingredients: oxygen x20, nitrogen x20, water x5, pump x1, 
+
+housing
+type: entity, recipe
+ingredients: life-suport-unit x10, steel x15, (glass if mod), electronics-circuit x10
+
+workshop
+ingredients: life-suport-unit x10, steel x20, (glass if mod), fast-inserters x5
+
+waiting-hall
+ingredients: life-support-uni x8, steel x30, (glass if mod)
+
+<!-- science intermidiates -->
+
   field-equipment
 type: itme
 subgroup: colonial-products
@@ -169,6 +212,8 @@ category: colonial-work
 energy: 70
 ingredients: colonist x3, high-tech-equipment x5
 done: icon,
+
+<!-- end science intermidiates  -->
 
   optical-observatory
 subgroup: colonial-buildings

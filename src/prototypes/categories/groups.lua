@@ -1,6 +1,7 @@
 data:extend(
 {
   -- item groups 
+  -- this is the order they whill appear in the colonial charter item tab 
   {
     type = "item-group",
     name = "colonial-charter",
@@ -45,10 +46,17 @@ data:extend(
     group = "colonial-charter",
     order = "f"
   },
+  {
+    type = "item-subgroup",
+    name = "colonial-gasses",
+    group = "colonial-charter",
+    order = "g"
+  },
 
 
   -- recipe categories
   -- refered as 'crafting-categorie' when defining an entity 
+  -- and category when defining a recipe 
   {
     type = "recipe-category",
     name = "colonial-rest"
@@ -68,6 +76,10 @@ data:extend(
   {
     type = "recipe-category",
     name = "colonial-landing"
+  },
+  {
+    type = "recipe-category",
+    name = "colonial-atmospherics"
   }
 
 })

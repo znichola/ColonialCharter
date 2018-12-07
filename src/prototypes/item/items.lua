@@ -224,6 +224,19 @@ data:extend({
         stack_size = 50,
       },
 
+      -- ATMOSPHERIC-SEQUESTOR
+      {
+        type = "item",
+        name = "atmospheric-sequestor",
+        icon = "__ColonialCharter__/graphics/icons/atmospheric-sequestor.png",
+        icon_size = 32,
+        flags = {"goes-to-quickbar"},
+        subgroup = "colonial-buildings",
+        order = "g[items]-e[atmospheric-sequestor]",
+        place_result = "atmospheric-sequestor",
+        stack_size = 20
+      },
+
       
 
 })
