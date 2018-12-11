@@ -237,6 +237,78 @@ data:extend({
         stack_size = 20
       },
 
+      -- LIFE SUPPRT UNIT
+      {
+        type = "item",
+        name = "life-support-unit",
+        icon = "__ColonialCharter__/graphics/icons/life-support-unit.png",
+        icon_size = 32,
+        flags = {"goes-to-main-inventory"},
+        subgroup = "colonial-products",
+        order = "g[life-support-unit]",
+        stack_size = 50,
+      },
       
+      -- science products
+      -- FIELD EQUIPMENT
+      {
+        type = "item",
+        name = "field-equipment",
+        icon = "__ColonialCharter__/graphics/icons/field-equipment.png",
+        icon_size = 32,
+        flags = {"goes-to-main-inventory"},
+        subgroup = "colonial-science",
+        order = "a[field-equipment]",
+        stack_size = 50,
+      },
+
+      -- MILITARY EQUIPMENT
+      {
+        type = "item",
+        name = "military-equipment",
+        icon = "__ColonialCharter__/graphics/icons/military-equipment.png",
+        icon_size = 32,
+        flags = {"goes-to-main-inventory"},
+        subgroup = "colonial-science",
+        order = "c[military-equipment]",
+        stack_size = 50,
+      },
+
+      -- INDUSTRIAL EQUIPMENT
+      {
+        type = "item",
+        name = "industrial-equipment",
+        icon = "__ColonialCharter__/graphics/icons/industrial-equipment.png",
+        icon_size = 32,
+        flags = {"goes-to-main-inventory"},
+        subgroup = "colonial-science",
+        order = "e[industrial-equipment]",
+        stack_size = 50,
+      },
+
+      -- HIGH TECH EQUIPMENT
+      {
+        type = "item",
+        name = "high-tech-equipment",
+        icon = "__ColonialCharter__/graphics/icons/high-tech-equipment.png",
+        icon_size = 32,
+        flags = {"goes-to-main-inventory"},
+        subgroup = "colonial-science",
+        order = "g[high-tech-equipment]",
+        stack_size = 50,
+      },
+
+      -- ATHENA
+      {
+        type = "item",
+        name = "athena",
+        icon = "__ColonialCharter__/graphics/icons/athena.png",
+        icon_size = 32,
+        flags = {"goes-to-quickbar"},
+        subgroup = "colonial-buildings",
+        order = "a[items]-z[athena]",
+        place_result = "athena",
+        stack_size = 20
+      },
 
 })

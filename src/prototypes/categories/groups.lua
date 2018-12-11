@@ -52,6 +52,12 @@ data:extend(
     group = "colonial-charter",
     order = "g"
   },
+  {
+    type = "item-subgroup",
+    name = "colonial-science",
+    group = "colonial-charter",
+    orger = "g"
+  },
 
 
   -- recipe categories
@@ -80,6 +86,10 @@ data:extend(
   {
     type = "recipe-category",
     name = "colonial-atmospherics"
+  },
+  {
+    type = "recipe-category",
+    name = "colonial-statue"
   }
 
 })

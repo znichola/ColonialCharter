@@ -32,8 +32,9 @@ cotton > clothes - leave this one for now.
 
 # TECH PROGRESSION
 ```
-find-good-tech > air-filtration > colonial-construction > colonial-agriculture
+automation-2 > air-filtration > colonial-construction > colonial-agriculture
 
+steel-processing > colonial-construction
 air-filtration > pollutant-sequestration
 
 advanced-electronics > colonial-coms > colonial-agriculture > colonial-charter > articles-of-colonisation
@@ -43,6 +44,8 @@ colonial-charter > colonial-bio-research > planethood
 articles-of-colonisation > colonial-reproductive-initiative > planethood
 
 articles-of-colonisation > charter-amendment-1 > charter-amendment-n
+
+military-2 > colonial-military-research
 
 articles-of-colonisation > colonial-production-optimisation > colonial-high-tech-production > colonial-space-reaserch >  planethood
 
@@ -58,72 +61,77 @@ rocket-silo > colonial-space-reaserch
 unlock recipe: nitrogen-sequestration, oxygen-sequestration, atmospheric-sequestor, 
 ingredients: science-pack-1 x50, science-pack-2 x50
 time: 10
-done: icon, 
+done: icon, tech
 
   pollutant-sequestration
 unlock recipe: pollutant-sequestration
 will see where to add this, not the highest priority. 
 
-colonial-construction
-unlock recipe: housing, workshop, waiting-hall
-ingredients: science-pack-1 x50, science-pack-2 x50
-time: 10
-
   colonial-coms
 unlock recipe: coms-dish,  colonist-arrival-data
 ingredients: science-pack-1 x50, science-pack-2 x50
 time: 15
-done: icon, 
+done: icon, tech
+
+colonial-construction
+unlock recipe: housing, workshop, waiting-hall, consumer-goods
+ingredients: science-pack-1 x50, science-pack-2 x50
+time: 10, icon, tech 
 
   colonial-agriculture
 unlock recipe: hydroponics-building, soil, fertiliser, automated-food
 ingredients: science-pack-1 x80, science-pack-2 x80
 time: 15
-done: icon, 
+done: icon, tech, 
 
   colonial-bio-research
 unlock recipe: bio-research, grow-lumber, field-equipment
 ingredients: science-pack-1 x100, science-pack-2 x 100
 time: 15
 This should be the way to produce blue science packs. 
-done: icon, 
+done: icon, tech
 
   colonial-charter
-unlock recipe: landing-site, colonist-landing
+unlock recipe: landing-site, landing-colonists,
 ingredients: science-pack-1 x80, science-pack-2 x80
 time: 15
-done: icon,
+done: icon, tech
 
   articles-of-colonisation
 unlock recipe: legal-work
 ingredients: science-pack-1 x150, science-pack-2 x150
 time: 20
-done: icon,
+done: icon, tech
 
   colonial-reproductive-initiative
 unlock recipe: reproduce, memorial, heal, medical-supplies
 ingredients: science-pack-1 x100, science-pack-2 x100, legal-documents x200
 time: 20
-done: icon,
+done: icon, tech
+
+colonial-military-research
+unlock recipe: military-equipment, 
+TODO: figureout where this fits in
+done: icon, tech
 
 colonial-production-optimisation
 unlock recipe: industrial-equipment, production-science-pack
-ingredients: science-pack-1 x200, science-pack-2 x200, science-pack-3 x200, legal-documents x200
+ingredients: science-pack-1 x200, science-pack-2 x200, science-pack-3 x200,legal-documents x200
 time: 30
-done: icon,
+done: icon, tech
 
 colonial-high-tech-production
 unlock recipe: high-tech-equipment, high-tech-science-pack
 ingredients: science-pack-1 x250, science-pack-2 x250, science-pack-3 x250, legal-documents x250
 time: 30
-done: icon,
+done: icon, tech
 
   charter-amendment
 this is where we put some sort of colonist output improvements, maybe workshop craft speed or something. 
 
   planethood
 this will be the final colonial tech, the *goal* of the mod. 
-done: icon,
+done: icon, tech
 
 ...
 ```
@@ -134,16 +142,16 @@ type: entity
 subgroup: colonial-buildings
 energy: 4
 ingredients: pump x5, iron-plate x10, electronic-circuit x20, copper-plate x20
-done: entity, recipe, itme, graphics,
+done: entity, recipe, item, graphics,
 
 atmospheric-sequestration
 type: fluid recipe
 produces: oxygen, nitrogen, pollutant
-done: fuild-recipe, 
+done: fuild-recipe, icon
 
 oxygen, nitrogen, pollutant
 type: fluid
-done: fluid.lua protoype in but untested, 
+done: fluid.lua protoype
 
 life-support-fuild - not needed if life support unit is made with chemistry
 type: fluid
@@ -155,17 +163,36 @@ type: itme, recipe
 subgroup: colonial-products
 category: chemistry, crafting-with-fluid
 energy: 1
-ingredients: oxygen x20, nitrogen x20, water x5, pump x1, 
+ingredients: oxygen x5, nitrogen x15, water x10, pump x1, 
+done: item, recipe
 
-housing
+colonial-housing
 type: entity, recipe
 ingredients: life-suport-unit x10, steel x15, (glass if mod), electronics-circuit x10
+done: recipe, graohics, item
 
-workshop
-ingredients: life-suport-unit x10, steel x20, (glass if mod), fast-inserters x5
+colonial-workshop
+ingredients: life-suport-unit x10, steel x20, (glass if mod), fast-inserters x5, electronics-circuit x10
+done: recipe, graohics, item
+
 
 waiting-hall
-ingredients: life-support-uni x8, steel x30, (glass if mod)
+ingredients: life-support-uni x8, steel x30, (glass if mod), electronics-circuit x10
+done: recipe, graohics, item
+
+consumer-goods
+ingredients: electronic-circuit x4, iron-plate x2
+done: icon, recipe, item 
+
+fertiliser
+ingredients: nitrogen x10, minerals x2
+done: recipe, uses stone instead of minrals for now
+done: icon, recipe, item
+
+soil
+ingredients: raw-wood x10, water x10, 
+result: 5
+DONE: icon, recipe, item
 
 <!-- science intermidiates -->
 
@@ -174,28 +201,28 @@ type: itme
 subgroup: colonial-products
 energy: 1
 ingredients: engine-unit x1, advanced-circuit x1, iron-gear-wheel x5, iron-plate x10
-done: icon, 
+done: icon, tech, recipe, item
 
   bio-research
 category: colonial-agriculture
 energy: 70 (vanilla blue is 12, time should be balanced with output)
-ingretients: field-equipment x6, colonist x3, soil x50, fertiliser x2, water x10
-result: tierd-colonist x3, soil x45, science-pack-3 x6
-done: icon, 
+ingretients: field-equipment x6, colonist x3, fertiliser x2, water x10
+result: tierd-colonist x3, science-pack-3 x6
+done: icon, tech, recipe
 
   military-equipment
 ingredients: grenade x1, gun-turret x1, piercing-rounds-magazine x1
-done: icon,
+done: icon, tech, recipe, item
 
   military-science-pack 
 category: colonial-work
 energy: 70
 ingredients: colonist x3, military-equipment x6
-done: use vanila icon,
+done: use vanila icon, 
 
   industrial-equipment
 ingredients: electric-engine-unit x1, electric-furnace  x1
-done: icon, 
+done: icon, tech, recipe, item
 
   production-science-pack
 category: colonial-work
@@ -205,7 +232,7 @@ done: use vanila icon,
 
   high-tech-equipment
 ingredients: battery x1, copper-cable x30, processing-unit x3, speed-module x1
-done: icon,
+done: icon, tech, recipe, item
 
   high-tech-science-pack
 category: colonial-work
@@ -225,6 +252,11 @@ something balanced for the lategame tech upgrades.
 done:
 ...
 ```
+# THINGS to think about after this tech addition
+- addin airfilters as an intermidiate for life support units and atmo-sequestor possibley as consumable for atmo-sequestor
+- missing colony ship and pods recipe. 
+
+
 # other stuff
 
 Migration snippets for future use 

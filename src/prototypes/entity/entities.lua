@@ -421,6 +421,44 @@ data:extend({
       selection_box = {{-4.5, -3.5}, {4.5, 3.5}},
       -- light = {intensity = 0.75, size = 8, color = {r = 1.0, g = 1.0, b = 1.0}},
       -- alert_icon_shift = util.by_pixel(-3, -12),
+      fluid_boxes =
+      {
+        {
+          production_type = "input",
+          pipe_picture = assembler2pipepictures(),
+          pipe_covers = pipecoverspictures(),
+          base_area = 10,
+          base_level = -1,
+          pipe_connections = {{ type="input", position = {-5, 0} }}
+          -- pipe_connections = {{ type="input", position = {0, -4} }}, -- NORTH/SOUTH
+          -- secondary_draw_orders = { north = -1 }
+        },
+        -- {
+        --   production_type = "input",
+        --   pipe_picture = assembler2pipepictures(),
+        --   pipe_covers = pipecoverspictures(),
+        --   base_area = 10,
+        --   base_level = -1,
+        --   pipe_connections = {{ type="input", position = {-5, 0} }}, --{2, 0} the north direction
+        --   -- secondary_draw_orders = { north = -1 }
+        -- },
+        -- off_when_no_fluid_recipe = true
+      },
+
+    --   fluid_boxes =
+    -- {
+    --   {
+    --     production_type = "input",
+    --     pipe_picture = assembler2pipepictures(),
+    --     pipe_covers = pipecoverspictures(),
+    --     base_area = 10,
+    --     base_level = -1,
+    --     pipe_connections = {{ type="input", position = {0, -2} }},
+    --     secondary_draw_orders = { north = -1 }
+    --   },
+    --   off_when_no_fluid_recipe = true
+    -- },
+      
       animation =
       {
         layers =
@@ -623,6 +661,7 @@ data:extend({
         type = "electric",
         usage_priority = "secondary-input",
         -- emissions = 0.05 / 1.5
+        emissions = -0.06
       },
       energy_usage = "800kW",
       ingredient_count = 1,
@@ -638,7 +677,88 @@ data:extend({
         },
         apparent_volume = 1
       },
-      -- module_specification = { module_slots = 0 }
+      module_specification = { module_slots = 2 },
+      allowed_effects = {"consumption", "speed", "pollution"}
+    },
+
+    -- ATHENA
+  {
+    type = "assembling-machine",
+    name = "athena",
+    icon = "__ColonialCharter__/graphics/icons/athena.png",
+    icon_size = 32,
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "athena"},
+    max_health = 300,
+    corpse = "big-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = {{-1.2, -0.7}, {1.2, 0.7}},
+    selection_box = {{-1.5, -0.75}, {1.5, 0.75}},
+    -- light = {intensity = 0.75, size = 8, color = {r = 1.0, g = 1.0, b = 1.0}},
+    -- alert_icon_shift = util.by_pixel(-3, -12),
+    animation =
+    {
+      layers =
+      {
+        {
+          filename = "__ColonialCharter__/graphics/entity/athena/athena.png",
+          width = 122,
+          height = 297,
+          frame_count = 1,
+          shift = util.by_pixel(-1, -109), 
+          hr_version =
+          {
+            filename = "__ColonialCharter__/graphics/entity/athena/hr-athena.png",
+            width = 224,
+            height = 546,
+            frame_count = 1,
+            shift = util.by_pixel(-1, -109),
+            scale = 0.5
+          }
+        },   
+        {
+          filename = "__ColonialCharter__/graphics/entity/athena/athena-shadow.png",
+          width = 244,
+          height = 81,
+          frame_count = 1,
+          shift = util.by_pixel(73, 24), 
+          draw_as_shadow = true,
+          hr_version =
+          {
+            filename = "__ColonialCharter__/graphics/entity/athena/hr-athena-shadow.png",
+            width = 487,
+            height = 162,
+            frame_count = 1,
+            shift = util.by_pixel(73, 24), 
+            scale = 0.5,
+            draw_as_shadow = true
+          }
+        }
+      }
+    },
+    crafting_categories = {"colonial-statue"},
+    crafting_speed = 5,
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      -- emissions = 0.05 / 1.5
+    },
+    energy_usage = "60kW",
+    ingredient_count = 1,
+    -- open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
+    -- close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    working_sound =
+    {
+      sound =
+      {
+        filename = "__base__/sound/lab.ogg",
+        volume = 0.7
+      },
+      apparent_volume = 1
+    },
+    -- module_specification = { module_slots = 0 }
     },
 
 

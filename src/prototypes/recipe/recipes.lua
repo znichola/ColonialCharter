@@ -1,16 +1,16 @@
 data:extend({
   -- colonial recipie catgories
-
+-- WAITING HALL
 {
   type = "recipe",
   name = "waiting-hall",
   energy_required = 5,
   ingredients =
   {
-    {"steel-plate", 40},
-    {"plastic-bar", 60},
+    {"steel-plate", 30},
+    {"life-support-unit", 8},
     -- {"concrete ", 80},
-    {"processing-unit", 20},
+    {"electronic-circuit", 10},
   },
   result = "waiting-hall",
   enabled = false,
@@ -18,22 +18,27 @@ data:extend({
   -- rest
 
 -- buildings
+
+-- COLONIAL HOUSING
 {
   type = "recipe",
   name = "colonial-housing",
   energy_required = 15,
   ingredients =
   {
-    {"steel-plate", 60},
-    {"plastic-bar", 80},
+    {"steel-plate", 15},
+    -- {"plastic-bar", 80},
     -- {"concrete ", 80},
-    {"processing-unit", 40},
+    {"life-support-unit", 10},
+    {"electronic-circuit", 10}
   },
   result = "colonial-housing",
   enabled = false,
 },
 
 -- actions
+
+-- COLONIAL REST
 {
   type = "recipe",
   name = "rest",
@@ -151,16 +156,19 @@ data:extend({
 -- work
 
 -- buildings
+
+-- COLONIAL WORKSHOP
 {
   type = "recipe",
   name = "colonial-workshop",
   energy_required = 15,
   ingredients =
   {
-    {"steel-plate", 60},
-    {"electric-engine-unit", 30},
+    {"steel-plate", 20},
+    {"life-support-unit", 10},
     -- {"concrete ", 80},
-    {"processing-unit", 40},
+    {"electronic-circuit", 10},
+    {"fast-inserter", 5}
   },
   result = "colonial-workshop",
   enabled = false,
@@ -281,10 +289,10 @@ data:extend({
   ingredients =
   {
     {"low-density-structure", 100},
-    {"processing-unit", 80},
-    {"nuclear-fuel", 8},
+    {"processing-unit", 40},
+    {"nuclear-fuel", 4},
     -- {"rocket-fuel", 60},
-    {"water-barrel", 10}
+    {"life-support-unit", 20}
   },
   result= "colony-ship",
   -- allow_decomposition = false,
@@ -298,28 +306,30 @@ data:extend({
   category = "crafting",
   ingredients =
   {
-    {"low-density-structure", 20},
-    {"processing-unit", 10},
-    {"nuclear-fuel", 1}
+    {"advanced-circuit", 4},
+    {"life-support-unit", 2},
+    {"battery-equipment", 4}, 
+    {"solar-panel-equipment", 8},
+    {"iron-plate", 10},
   },
   result= "empty-pod",
-  result_count = 2,
-  requester_paste_multiplier = 1
+  result_count = 1,
+  -- requester_paste_multiplier = 1
 },
 {
   type = "recipe",
   name = "consumer-goods",
   category = "crafting",
   enabled = false,
-  energy_required = 5,
+  energy_required = 1,
   ingredients = 
   {
-    {"processing-unit", 5},
-    {"plastic-bar", 30},
-    {"battery", 5}
+    {"electronic-circuit", 2},
+    {"plastic-bar", 2},
+    {"battery", 1}
   },
   result = "consumer-goods",
-  result_count = 2,
+  result_count = 1,
 },
 
 {
@@ -330,8 +340,8 @@ data:extend({
   energy_required = 1,
   ingredients = 
   {
-    {"processing-unit", 10},
-    {"plastic-bar", 20},
+    {"advanced-circuit", 4},
+    {"plastic-bar", 2},
   },
   result = "medical-supplies",
   result_count = 1,
@@ -349,7 +359,7 @@ data:extend({
     -- {"concrete ", 80},
   },
   result = "landing-site",
-  enabled = true,
+  enabled = false,
 },
 
 {
@@ -372,7 +382,7 @@ data:extend({
   allow_decomposition = false,
   category = "colonial-landing",
   subgroup = "colonial-landing",
-  enabled = true,
+  enabled = false,
 },
 
 {
@@ -398,24 +408,29 @@ data:extend({
     -- {"electronic-circuit", 1}
   },
   result= "colonist-arrival-data",
-  allow_decomposition = false,
+  -- allow_decomposition = false,
   enabled = false,
   subgroup = "colonial-coms",
 },
 
-
+-- HYDROPONICS BUILDING
 {
   type = "recipe",
   name = "hydroponics-building",
   energy_required = 15,
   ingredients =
   {
-    {"iron-plate", 60},
-    {"electronic-circuit", 30},
+
+    {"steel-plate", 25},
+    -- {"plastic-bar", 80},
+    -- {"glass ", 80},
     -- {"concrete ", 80},
+    {"life-support-unit", 15},
+    {"electronic-circuit", 10},
+    {"soil", 200}
   },
   result = "hydroponics-building",
-  enabled = true,
+  enabled = false,
 },
 {
   type = "recipe",
@@ -426,22 +441,23 @@ data:extend({
   ingredients =
   {
     {"raw-wood", 10},
-    {"stone", 1},
+    -- {"stone", 1},
     {type="fluid", name="water", amount=10}
   },
   result= "soil",
-  result_count = 1
+  result_count = 20,
 },
 {
   type = "recipe",
   name = "fertiliser",
   energy_required = 10,
   enabled = false,
-  category = "crafting",
+  category = "crafting-with-fluid",
   ingredients =
   {
-    {"coal", 4},
-    {"stone", 2},
+    {type="fluid", name="nitrogen", amount=10},
+    {"stone", 1},
+    -- {"minerals", 2} -- have yet to add this in. 
   },
   result= "fertiliser",
   result_count = 1
@@ -449,86 +465,73 @@ data:extend({
 {
   type = "recipe",
   name = "automated-food",
-  icon = "__ColonialCharter__/graphics/icons/automated-food.png",
-  icon_size = 32,
-  energy_required = 80,
+  -- icon = "__ColonialCharter__/graphics/icons/automated-food.png",
+  -- icon_size = 32,
+  energy_required = 50,
   enabled = false,
   category = "colonial-agriculture",
   subgroup = "colonial-products",
   ingredients =
   {
-    {"soil", 100},
-    {"fertiliser", 40},
-    -- {type="fluid", name="water", amount=100}
+    {"fertiliser", 12},
+    {type="fluid", name="water", amount=100}
   },
-  results =
-  {
-    {
-      name = "food",
-      amount = 20
-    },
-    {
-      name = "soil",
-      amount = 80
-    },
-  },
+  result = "food",
+  result_count = 40,
 },
 {
   type = "recipe",
   name = "grow-lumber",
   icon = "__base__/graphics/icons/raw-wood.png",
   icon_size = 32,
-  energy_required = 80,
+  energy_required = 120,
   enabled = false,
   category = "colonial-agriculture",
   subgroup = "colonial-products",
   ingredients =
   {
-    {"soil", 100},
-    {"fertiliser", 40},
-    -- {type="fluid", name="water", amount=100}
+    {"soil", 20},
+    {"fertiliser", 10},
+    {type="fluid", name="water", amount=100}
   },
   results =
   {
     {
-      name = "wood",
+      name = "raw-wood",
       amount = 100
     },
-    {
-      name = "soil",
-      amount = 80
-    },
   },
+  allow_decomposition = false,
 },
-{
-  type = "recipe",
-  name = "bio-research",
-  icon = "__ColonialCharter__/graphics/icons/bio-research.png",
-  icon_size = 32,
-  energy_required = 80,
-  enabled = false,
-  category = "colonial-agriculture",
-  subgroup = "colonial-activities",
-  ingredients =
-  {
-    {"soil", 100},
-    {"fertiliser", 40},
-    -- {type="fluid", name="water", amount=100}
-  },
-  results =
-  {
-    {
-      name = "food",
-      amount = 10
-    },
-    {
-      name = "soil",
-      amount = 80
-    },
-  },
-},
+-- {
+--   type = "recipe",
+--   name = "bio-research",
+--   icon = "__ColonialCharter__/graphics/icons/bio-research.png",
+--   icon_size = 32,
+--   energy_required = 80,
+--   enabled = false,
+--   category = "colonial-agriculture",
+--   subgroup = "colonial-activities",
+--   ingredients =
+--   {
+--     {"soil", 100},
+--     {"fertiliser", 40},
+--     -- {type="fluid", name="water", amount=100}
+--   },
+--   results =
+--   {
+--     {
+--       name = "food",
+--       amount = 10
+--     },
+--     {
+--       name = "soil",
+--       amount = 80
+--     },
+--   },
+-- },
 
--- ATMOSPHERIC SEQUSTRATION
+-- ATMOSPHERIC SEQUESTOR
 {
   type = "recipe",
   name = "atmospheric-sequestor",
@@ -541,9 +544,150 @@ data:extend({
     {"pump", 5},
   },
   result = "atmospheric-sequestor",
-  enabled = true,
+  enabled = false,
+},
+{
+  type = "recipe",
+  name = "life-support-unit",
+  energy_required = 30,
+  enabled = false,
+  category = "crafting-with-fluid",
+  ingredients =
+  {
+    {type="fluid", name="life-support-air", amount=20},
+    {"pump", 1},
+    {"electronic-circuit", 4},
+    {"water-barrel", 1}
+  },
+  result= "life-support-unit",
+  -- allow_decomposition = false,
+  -- requester_paste_multiplier = 1
 },
 
 
+-- science products
+
+-- FIELD EQUIPMENT 
+{
+  type = "recipe",
+  name = "field-equipment",
+  category = "crafting",
+  enabled = false,
+  energy_required = 1,
+  icon = "__ColonialCharter__/graphics/icons/field-equipment.png",
+  icon_size = 32,
+  ingredients = 
+  {
+    {"engine-unit", 1},
+    {"advanced-circuit", 1},
+    {"iron-gear-wheel", 5},
+    {"iron-plate", 10},
+  },
+  result = "field-equipment",
+  subgroup = "colonial-science",
+  -- allow_decomposition = false,
+}, 
+-- BIO RESEARCH 
+{
+  type = "recipe",
+  name = "bio-research",
+  category = "colonial-agriculture",
+  enabled = false,
+  energy_required = 70,
+  icon = "__ColonialCharter__/graphics/icons/bio-research.png",
+  icon_size = 32,
+  ingredients = 
+  {
+    {"colonist", 3},
+    {"field-equipment", 6},
+    {"fertiliser", 8},
+    {type="fluid", name="water", amount=40}
+  },
+  results =
+  {
+    {name = "tired-colonist", amount = 2},
+    {name = "tired-colonist", probability = 0.92, amount = 1},
+    {name = "injured-colonist", probability = 0.08, amount = 1},
+    {name = "science-pack-3",  amount = 6},
+    {name = "food", amount = 12}
+  },
+  subgroup = "colonial-activities",
+  allow_decomposition = false,
+},
+
+-- MILITARY EQUIPMENT 
+{
+  type = "recipe",
+  name = "military-equipment",
+  category = "crafting",
+  enabled = false,
+  energy_required = 1,
+  icon = "__ColonialCharter__/graphics/icons/military-equipment.png",
+  icon_size = 32,
+  ingredients = 
+  {
+    {"grenade", 1},
+    {"gun-turret", 1},
+    {"piercing-rounds-magazine", 1}
+  },
+  result = "military-equipment",
+  subgroup = "colonial-science",
+  -- allow_decomposition = false,
+}, 
+
+-- INDUSTRIAL EQUIPMENT
+{
+  type = "recipe",
+  name = "industrial-equipment",
+  category = "crafting",
+  enabled = false,
+  energy_required = 1,
+  icon = "__ColonialCharter__/graphics/icons/industrial-equipment.png",
+  icon_size = 32,
+  ingredients = 
+  {
+    {"electric-engine-unit", 1},
+    {"electric-furnace", 1},
+  },
+  result = "industrial-equipment",
+  subgroup = "colonial-science",
+  -- allow_decomposition = false,
+},
+
+-- HIGH TECH EQUIPMENT
+{
+  type = "recipe",
+  name = "high-tech-equipment",
+  category = "crafting",
+  enabled = false,
+  energy_required = 1,
+  icon = "__ColonialCharter__/graphics/icons/high-tech-equipment.png",
+  icon_size = 32,
+  ingredients = 
+  {
+    {"battery", 1},
+    {"copper-cable", 30},
+    {"processing-unit", 3},
+    {"speed-module", 1},
+  },
+  result = "high-tech-equipment",
+  subgroup = "colonial-science",
+  -- allow_decomposition = false,
+},
+
+-- ATHENA 
+{
+  type = "recipe",
+  name = "athena",
+  energy_required = 50,
+  ingredients =
+  {
+    {"steel-plate", 120},
+    -- {"electronic-circuit", 30},
+    {"concrete", 400},
+  },
+  result = "athena",
+  enabled = false,
+},
 
 })

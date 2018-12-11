@@ -24,7 +24,7 @@ start_game = True
 ### factorio_exe = "c:\\Games\\Factorio\\bin\\factorio.exe"
 ### factorio_exe = "/home/user/.steam/steam/steamapps/common/Factorio/bin/x64/factorio"
 ### factorio_exe = "/home/user/.steam/steam/steamapps/common/Factorio/bin/x64/factorio --load-game /home/user/.factorio/saves/TestColonie2"
-factorio_exe = ''
+factorio_exe = 'c:\\Program Files\\Factorio\\bin\\x64\\factorio.exe'
 
 ## Get information from filesystem
 user_dir = ""
@@ -38,7 +38,7 @@ user_dir = os.path.expanduser('~')
 if platform.system() == "Windows":
     factorio_mod_dir = os.path.join(user_dir, "AppData", "Roaming", "Factorio", "mods")
     key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Software\\Valve\\Steam")
-    steam_exe = winreg.QueryValueEx(key, "SteamExe")[0]
+    # steam_exe = winreg.QueryValueEx(key, "SteamExe")[0]
 else:
     factorio_mod_dir = os.path.join(user_dir, ".factorio", "mods")
     steam_exe = "steam"
